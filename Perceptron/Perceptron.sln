@@ -1,0 +1,55 @@
+tab | grep -i +ASM | grep -v ^# | awk -F: '{print $2}' | tr -d ' ' `
+  fi
+  export PATH=$ORACLE_HOME/bin:$PATH
+ elif [ ${ORACLE_SID}x = ${ORACLE_SID}x ] && [ ! -z ${v_oratab}  ] ; then
+  export ORACLE_SID=`ps -ef| grep -i asm_pmon | grep -v grep | awk '{print $8}' | awk -F_ '{print $3}'`
+  if [ ${ORACLE_HOME}x = x ] ; then
+   export ORACLE_HOME=`cat $v_oratab | grep -i +ASM | grep -v ^# | awk -F: '{print $2}' | tr -d ' ' `
+  fi
+  export PATH=$ORACLE_HOME/bin:$PATH
+ else
+  echo "unable to set ASM Home. Exiting."
+  status=1
+  exit 1
+ fi
+}
+
+function get_afd_data {
+
+ locate_lsmod
+
+ v_afd_loaded=$($v_lsmod | grep -i oracleafd | wc -l)
+
+ if [ ${v_afd_loaded} -gt 0 ] ; then
+   # AFD is running
+
+   get_oratab_loc
+   set_asm_home
+
+   # to get list of AFD managed devices
+   v_afd_devlist=$($ORACLE_HOME/bin/afdtool -getdevlist -nohdr | awk '{print $2}' | tr -d ' ')
+
+   v_afd_dev_cnt=$(echo $v_afd_devlist | wc -l)
+
+   if [ ${v_afd_dev_cnt} -gt 0 ] ; then
+     v_afd_dev=true
+   else
+     v_afd_dev=false
+   fi
+
+ else
+  v_afd_dev=false
+ fi
+
+}
+
+function check_kernel_for_elevator {
+
+ # at kernel level
+
+ if [ -r /boot/config-`uname -am | awk '{print $3}'` ] ; then
+  v_def_kern_iosched=$(cat /boot/config-`uname -am | awk '{print $3}'`| grep CONFIG_DEFAULT_IOSCHED | awk -F= '{print $2}' | sed 's/.*\"\([^]]*\)\".*/\1/')
+
+  if [ "${v_def_kern_iosched}" = "deadline" ]
+   then
+    report_command=$(echo "$report_command\nKernel default IO s

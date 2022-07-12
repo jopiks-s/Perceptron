@@ -1,0 +1,41 @@
+#!/usr/bin/bash
+#
+# Copyright (c) 2016, Oracle and/or its affiliates. All rights reserved.
+#
+# ident "@(#)cluster_check_os_check.sh 1.3     16/06/28"
+#
+# This script is intended to be run by the ORAchk health-check tool
+# as an OS CHECK operation, to parse the output from the OS COLLECT
+# task which ran "cluster check". This avoids the need to include all
+# this bash code, duplicated, in each check.
+#
+# This script ships with both ORAchk and Solaris Cluster. ORAchk will
+# always invoke the script it ships but, in case the installed cluster
+# software has a more recent version, we check and will use the cluster
+# one if it is newer.
+#
+# Note that this "version" variable *must* always be incremented
+# if this script is changed, and a copy of the new script supplied to
+# the ORAchk team. See the README in the cluster source directory for
+# details.
+
+version=10
+
+#
+# This script parses both *single node* checks, those which begin
+# with a letter "S", and *multinode* checks, those which begin with
+# a letter "M"
+#
+# Although parsing XML is arguably easier in Perl with something
+# like XML::Parser, the small amount of parsing that needs to be
+# done makes the use of standard shell scripting acceptable, and
+# more convenient.
+#
+# Takes one parameter which can be either:
+# $1 = the lowercase string "version", the script will exit with
+#      the current version number, or:
+# $1 = a single check number, one of the list given to OS COLLECT
+#
+# The script will print a text status to stdout, which will be a
+# report containing the status of the check on each cluster node,
+# This report must be caught a

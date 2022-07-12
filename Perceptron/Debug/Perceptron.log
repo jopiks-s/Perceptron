@@ -1,0 +1,27 @@
+﻿  Perceptron.cpp
+C:\Users\Home\Desktop\AI lib\Perceptron\Perceptron.cpp(57,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Home\Desktop\AI lib\Perceptron\Perceptron.cpp(60,33): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Home\Desktop\AI lib\Perceptron\Perceptron.cpp(79,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+C:\Users\Home\Desktop\AI lib\Perceptron\Perceptron.cpp(84,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Home\Desktop\AI lib\Perceptron\Perceptron.cpp(88,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Home\Desktop\AI lib\Perceptron\Perceptron.cpp(94,17): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\Home\Desktop\AI lib\Perceptron\Perceptron.cpp(111,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Home\Desktop\AI lib\Perceptron\Perceptron.cpp(112,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Home\Desktop\AI lib\Perceptron\Perceptron.cpp(113,22): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Home\Desktop\AI lib\Perceptron\Perceptron.cpp(114,23): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Home\Desktop\AI lib\Perceptron\Perceptron.cpp(118,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Home\Desktop\AI lib\Perceptron\Perceptron.cpp(119,21): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Home\Desktop\AI lib\Perceptron\Perceptron.cpp(120,22): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Home\Desktop\AI lib\Perceptron\Perceptron.cpp(123,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Home\Desktop\AI lib\Perceptron\Perceptron.cpp(126,33): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Home\Desktop\AI lib\Perceptron\Perceptron.cpp(171,33): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Home\Desktop\AI lib\Perceptron\Perceptron.cpp(184,25): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Home\Desktop\AI lib\Perceptron\Perceptron.cpp(194,22): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Home\Desktop\AI lib\Perceptron\Perceptron.cpp(218,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Home\Desktop\AI lib\Perceptron\Perceptron.cpp(225,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Home\Desktop\AI lib\Perceptron\Perceptron.cpp(233,38): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Home\Desktop\AI lib\Perceptron\Perceptron.cpp(266,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Home\Desktop\AI lib\Perceptron\Perceptron.cpp(269,33): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Home\Desktop\AI lib\Perceptron\Perceptron.cpp(288,31): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\Home\Desktop\AI lib\Perceptron\Perceptron.cpp(289,20): warning C4018: <: несоответствие типов со знаком и без знака
+  Perceptron.vcxproj -> C:\Users\Home\Desktop\AI lib\Perceptron\Debug\Perceptron.lib
